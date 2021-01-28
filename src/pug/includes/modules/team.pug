@@ -1,0 +1,25 @@
+-
+  var teamCard = [
+    {imgSrc: 'assets/img/team-default.png', href:'#', title: 'SEMF UCUK', descr: 'CEO & FOUNDER'},
+    {imgSrc: 'assets/img/team-default.png', href:'#', title: 'DIK ADALIN', descr: 'ENGINEERING'},
+    {imgSrc: 'assets/img/team-default.png', href:'#', title: 'JENG KOL', descr: 'DESIGNER'},
+    {imgSrc: 'assets/img/team-default.png', href:'#', title: 'PET ROMAK', descr: 'MARKETING'},
+  ]
+
+.team
+  .container
+    .row
+      .col-12
+        h2.center MEET OUR AMAZING TEAM
+        p.title-descr.center Lorem ipsum dolor sit amet proin gravida nibh vel velit
+        hr.line
+    .row.team-cards
+      each card in teamCard
+        .col-12.col-sm-6.col-lg-3
+          +team-item(card.title, card.descr, card.imgSrc, card.href)
+    .row
+      .col-12
+        p.center Become part of our dream team, let’s join us !
+        a(class = 'btn btn-primary' href = '#') WE ARE HIRING
+
+

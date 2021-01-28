@@ -1,0 +1,16 @@
+-
+  var values = [
+    { href: '/', title: 'Номе', active:'active'},
+    { href: '#about', title: 'About'},
+    { href: '#expertize', title: 'Expertize'},
+    { href: '#teams', title: 'Teams'},
+    { href: '#works', title: 'Works'},
+    { href: '#people-say', title: 'People say'},
+    { href: '#contact', title: 'Contact'}
+    ];
+.menu-close
+ul(class='menu')
+  each val in values
+    li(class = (val.active ? val.active : ''))
+      a(class = 'menu-link' href = val.href)  #{val.title}
+

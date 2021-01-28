@@ -1,0 +1,120 @@
+.expertize{
+  padding-top: 67px ;
+  padding-bottom: 63px;
+
+  @include media-max-width('md') {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+
+  &-card {
+    font-family: $mainFont1;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.7px;
+    color: $mainFontColor;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: none;
+    border-left: none;
+      @include media-max-width(sm) {  border: none;}
+
+    &:nth-child(2) {@include media-min-width('sm'){border-right: none}}
+    &:nth-child(4) {@include media-min-width('sm'){border-right: none;}}
+    &:nth-child(5) {@include media-min-width('sm'){border-bottom: none;}}
+    &:nth-child(6) {@include media-min-width('sm'){border-right: none;border-bottom: none;}}
+
+
+    &:nth-child(2) {@include media-min-width('lg'){border-right: 1px solid rgba(0, 0, 0, 0.08);}}
+    &:nth-child(3) {@include media-min-width('lg'){border-right: none}}
+    &:nth-child(4) {@include media-min-width('lg'){border-bottom: none;border-right: 1px solid rgba(0, 0, 0, 0.08);}}
+    &:nth-child(5) {@include media-min-width('lg'){border-bottom: none;}}
+    &:nth-child(6) {@include media-min-width('lg'){border-bottom: none; border-right: none}}
+
+    &:not(:last-child) {
+      .expertize-item{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        @include media-min-width('sm'){border-bottom: none}
+      }
+    }
+
+  }
+  &-item{
+    padding: 40px 13px;
+  }
+  &-img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 33px;
+    background: url(/assets/img/icon-sprite.png) no-repeat;
+
+
+  }
+  &-link{
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 900;
+    color: inherit;
+    line-height: 1.2;
+    text-align: inherit;
+    margin-bottom: 19px;
+    letter-spacing: inherit;
+  }
+  &-descr{
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 300;
+    color: inherit;
+    line-height: 1.57;
+    letter-spacing: inherit;
+    text-align: inherit;
+    opacity:  0.75;
+
+    height: 58px;
+    overflow: hidden;
+
+  }
+
+
+
+  h2 {
+    margin-bottom: 10px;
+  }
+  p {
+    letter-spacing: 1.25px;
+  }
+
+  .line {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    opacity: .3;
+    border-color: $mainFontColor;
+  }
+}
+
+
+
+.web-design {
+  background-position: 0 -55px;
+}
+.branding {
+  background-position: -55px -55px;
+}
+.mobile-app {
+  background-position: -110px -55px;
+}
+.optimization {
+  background-position: 0 -110px;
+}
+.game-dev {
+  background-position: -55px -110px;
+}
+.made-love {
+  background-position:  -110px -110px;
+}

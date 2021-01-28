@@ -1,0 +1,25 @@
+
+.contact
+  .container
+    .row
+      .col-12
+        h2.center GIVE US A GOOD NEWS
+    .row
+      .col-12.col-md-8.col-lg-6.centered
+        form.contact-form
+          .form-item
+            input(type = 'text' name = 'name' placeholder = 'Name' required = 'required')
+            .form-item-error Error
+
+          .form-item
+            input(type = 'email' name = 'email' placeholder = 'Email' required = 'required')
+            .form-item-error Error
+
+          .form-item
+            input(type = 'text' name = 'subject' placeholder = 'Subject' required = 'required')
+            .form-item-error Error
+
+          .form-item
+            textarea(name = 'message' placeholder = 'Your Message' required = 'required')
+            .form-item-error Error
+          button(class = 'btn btn-primary' type = 'submit' ) submit

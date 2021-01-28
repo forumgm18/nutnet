@@ -1,0 +1,57 @@
+mixin expertize-item(title, descr, imgClass, href)
+  .expertize-item
+    a(class = 'expertize-img ' + imgClass href = `'${href}'`)
+    a(class = 'expertize-link' href = `'${href}'`) #{title}
+    .expertize-descr #{descr}
+
+mixin team-item(title, descr, imgSrc, href)
+  .team-item
+    a(class = 'team-img' href = `'${href}'`)
+      div
+        img(src = imgSrc)
+    .team-content
+      a(class = 'team-link' href = `'${href}'`) #{title}
+      .team-descr #{descr}
+
+mixin works-item(bgr, imgSrc, href)
+  a(class = 'works-item' href = `'${href}'` style='background-color: ' + bgr + ';')
+    div
+      img(src = imgSrc)
+
+
+mixin rewiev-item-content(name, descr, review)
+  .rewiev-text #{review}
+  .rewiev-name #{name}
+  .rewiev-descr #{descr}
+
+mixin rewiev-item(name, descr, review)
+  .rewiev-item
+    .rewiev-text #{review}
+    .rewiev-name #{name}
+    .rewiev-descr #{descr}
+
+mixin rewiev-item-dot(name, avatar)
+  div
+    .rewiev-item-dot
+      img(src = avatar alt = name)
+
+mixin rewiev-item-content(id, name, descr, review, cls)
+  div(class = cls data-review-id = id)
+    .review-text #{review}
+    .review-name #{name}
+    .review-descr #{descr}
+
+mixin rewiev-item2(id, name, descr, review, active)
+  if active
+    +rewiev-item-content(id, name, descr, review, 'review-item active')
+  else
+    +rewiev-item-content(id, name, descr, review, 'review-item')
+
+mixin rewiev-item-dot2(id, name, avatar, active)
+  if active
+    .review-nav-item.active(data-nav-id = id)
+      img(src = avatar alt = name)
+  else
+    .review-nav-item(data-nav-id = id)
+      img(src = avatar alt = name)
+

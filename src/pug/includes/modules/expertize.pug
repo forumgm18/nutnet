@@ -1,0 +1,21 @@
+-
+  var expCard = [
+    {imgClass: 'web-design', href:'#', title: 'WEB DESIGN & DEVELOPMENT', descr: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.'},
+    {imgClass: 'branding', href:'#', title: 'BRANDING IDENTITY', descr: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.'},
+    {imgClass: 'mobile-app', href:'#', title: 'MOBILE APP', descr: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.'},
+    {imgClass: 'optimization', href:'#', title: 'SEARCH ENGINE OPTIMIZATION', descr: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.'},
+    {imgClass: 'game-dev', href:'#', title: 'GAME DEVELOPMENT', descr: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.'},
+    {imgClass: 'made-love', href:'#', title: 'MADE WITH LOVE', descr: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.'},
+  ]
+
+.expertize
+  .container
+    .row
+      .col-12
+        h2.center EXPERTISE
+        p.center Lorem ipsum dolor sit amet proin gravida nibh vel velit
+        hr.line
+    .row
+      each card in expCard
+        .col-12.col-sm-6.col-lg-4.expertize-card
+          +expertize-item(card.title, card.descr, card.imgClass, card.href)

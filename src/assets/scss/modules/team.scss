@@ -1,0 +1,90 @@
+.team {
+  padding-top: 67px;
+  padding-bottom: 68px;
+  background-image: url(/assets/img/meet-our.png);
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: cover;
+
+    @include media-max-width('md') {
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+    }
+
+  &-cards{
+    margin-bottom: 45px;
+  }
+  &-item{
+    font-family: $mainFont1;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: $default-color;
+
+    margin-bottom: $grid-gutter-width;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 350px;
+
+  }
+  &-img{
+    position: relative;
+    display: block;
+    height: 0;
+    padding-bottom: 103%;
+
+      > div {
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  }
+  &-link{
+    margin: 0 8px 12px 5px;
+    @include fontInherit($fw:900);
+  }
+  &-content{
+    padding: 21px 10px;
+    border: 1px solid rgba(225, 225, 225, .5);
+  }
+  &-descr{
+    margin-top: 6px;
+    opacity: 0.7;
+    @include fontInherit($fz:13px, $fw:300, $color: rgb(250, 250, 250), $ls: normal);
+  }
+  h2 {
+    color: $default-color;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #f3f3f3;
+    letter-spacing: 0.7px;
+  }
+  .title-descr {
+    color: #f9f9f9;
+    letter-spacing: 1.25px;
+  }
+  .line {
+    opacity: 0.2;
+    border-color: #fff;
+    margin-top: 15px;
+    font-size: 48px;
+  }
+  .btn {
+    margin-top: 22px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

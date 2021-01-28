@@ -1,0 +1,33 @@
+-
+  var workCard = [
+    {bgr: '#b6b6b6', imgSrc: '#', href:'#'},
+    {bgr: '#acacac', imgSrc: '#', href:'#'},
+    {bgr: '#a1a1a1', imgSrc: '#', href:'#'},
+    {bgr: '#8a8a8a', imgSrc: '#', href:'#'},
+    {bgr: '#b6b6b6', imgSrc: '#', href:'#'},
+    {bgr: '#a4a4a4', imgSrc: '#', href:'#'},
+    {bgr: '#a4a4a4', imgSrc: '#', href:'#'},
+    {bgr: '#b6b6b6', imgSrc: '#', href:'#'},
+    {bgr: '#8a8a8a', imgSrc: '#', href:'#'},
+    {bgr: '#a1a1a1', imgSrc: '#', href:'#'},
+    {bgr: '#acacac', imgSrc: '#', href:'#'},
+    {bgr: '#b6b6b6', imgSrc: '#', href:'#'}
+  ]
+
+.works
+  .container
+    .row
+      .col-12.works-header
+        h2 OUR works
+        a(class = 'works-all-link')
+          span See All Project in dribbble
+
+  .works-cards
+    each card in workCard
+      +works-item(card.bgr, card.imgSrc, card.href)
+  .container
+    .row
+      .col-12
+        a(class = 'btn btn-primary' href = '#') load more
+
+

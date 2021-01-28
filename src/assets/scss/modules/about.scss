@@ -1,0 +1,33 @@
+.about {
+  padding: 67px 0 70px 0;
+    @include media-max-width('md') {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+  &-img {
+    display: block;
+    margin-left: auto;
+    margin-top: 3px;
+    width: 235px;
+    height: auto;
+  }
+  &-description {
+    margin-bottom: 28px;
+  }
+  //h2 {
+  //  font-size: 22px;
+  //  text-transform: uppercase;
+  //  letter-spacing: 2px;
+  //  font-weight: 400;
+  //  margin-bottom: 18px;
+  //}
+
+
+  p {
+    line-height: 1.572;
+    letter-spacing: 0.45px;
+    margin-bottom: 21px;
+
+  }
+}
